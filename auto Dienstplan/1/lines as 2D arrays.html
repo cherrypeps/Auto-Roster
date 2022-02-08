@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+</head>
+
+<body>
+
+
+
+    <script>
+        var grid = [];
+
+        for (var i = 0; i < 20; i++) {
+            grid[i] = new Array(30);
+        }
+
+        for (var i = 0; i < 20; i++) {
+            for (var j = 0; j < 30; j++) {
+                grid[i][j] = "-";
+            }
+        }
+
+        for (var i = 0; i < 20; i++) {
+            for (var j = 0; j < 30; j++) {
+                document.write(grid[i][j] + " ");
+            }
+            document.write("<br>");
+        }
+    </script>
+
+</body>
+
+</html>

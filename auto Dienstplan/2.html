@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #myTable {
+            font-family: calibri;
+            font-size: 20px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        #myTable td,
+        #myTable th {
+            padding: 5px;
+        }
+        
+        #myTable tr:nth-child(even) {
+            background-color: #e0e0e0;
+        }
+        
+        #myTable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #d19dbc;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table id="myTable">
+        <tr id="month">
+            <th>August</th>
+        </tr>
+
+        <tr>
+            <td>Alfred Kämmer</td>
+            <td>F</td>
+            <td>S</td>
+        </tr>
+    </table>
+
+    <script>
+        for (i = 1; i < 32; i++) {
+
+            var th = document.createElement("TH");
+            var textnode = document.createTextNode(i);
+            th.appendChild(textnode);
+            document.getElementById("month").appendChild(th);
+
+        }
+    </script>
+
+</body>
+
+</html>

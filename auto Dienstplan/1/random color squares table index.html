@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+<script src="p5.js"></script>
+    <script>
+
+
+	var cols = 100;
+	var rows = 100;
+
+
+	function make2Darray(cols, rows) {
+	  var arr = new Array(cols);
+	  for (var i = 0; i < arr.length; i++) {
+		arr[i] = new Array(rows);
+	  }
+	  return arr;
+	}
+
+	function setup() {
+	  createCanvas(900, 900);
+	  colors = make2Darray(cols, rows);
+	  for (var i = 0; i < cols; i++) {
+		for (var j = 0; j < rows; j++) {
+			if (i < 1 && j<1) {
+			  colors[i][j] = [255, 255, 255];
+		  }
+		  else if (i < 1) {
+			  colors[i][j] = [0, 0, 0];
+		  }
+		  else if (j <1){
+		  colors[i][j] = [0,0,0];
+		  }
+		  else {
+		  colors[i][j] = [66, random(245), 245];
+		  }
+		}
+	  }
+	}
+
+	function draw() {
+	  for (var i = 0; i < cols; i++) {
+		for (var j = 0; j < rows; j++) {
+		  var x = i * 10;
+		  var y =  j * 10;
+		  fill(colors[i][j][0], colors[i][j][1], colors[i][j][2]);
+		  noStroke();
+		  rect(x, y, 10, 10);
+		}
+	  }
+	}
+	
+    </script>
+  </body>
+</html>
